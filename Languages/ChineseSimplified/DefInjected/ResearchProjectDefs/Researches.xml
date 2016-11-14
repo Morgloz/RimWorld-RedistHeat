@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RH_TemperatureControlHeating.label>工业级加热器</RH_TemperatureControlHeating.label>
+	<RH_TemperatureControlHeating.description>允许建造工业级加热器。</RH_TemperatureControlHeating.description>
+
+	<RH_TemperatureControlCooling.label>工业级制冷机</RH_TemperatureControlCooling.label>
+	<RH_TemperatureControlCooling.description>允许建造工业级制冷机。</RH_TemperatureControlCooling.description>
+
+</LanguageData>
