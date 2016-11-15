@@ -5,11 +5,11 @@
     <RedistHeat_Working>可用</RedistHeat_Working>
     <RedistHeat_NotWorking>不可用</RedistHeat_NotWorking>
 
-    <RedistHeat_WorkingDucts>可用排风口</RedistHeat_WorkingDucts>
+    <RedistHeat_WorkingDucts>可用排气口</RedistHeat_WorkingDucts>
 
     <RedistHeat_MustExposeDuct>标记为橙色的方块不能被阻塞。</RedistHeat_MustExposeDuct>
-    <RedistHeat_MustExposeHotSide>排风口的热端不能被阻塞。</RedistHeat_MustExposeHotSide>
+    <RedistHeat_MustExposeHotSide>排气口的热端不能被阻塞。</RedistHeat_MustExposeHotSide>
     <RedistHeat_MustExposeColdSide>制冷机的冷端不能被阻塞。</RedistHeat_MustExposeColdSide>
-    <RedistHeat_MustPlaceBackSideOnCooler>必须放置于制冷机的灰色箭头处。</RedistHeat_MustPlaceBackSideOnCooler>
+    <RedistHeat_MustPlaceBackSideOnCooler>灰色箭头必须紧挨着制冷机。</RedistHeat_MustPlaceBackSideOnCooler>
 
 </LanguageData>

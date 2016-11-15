@@ -25,11 +25,11 @@
 
 	<RedistHeat_IndustrialCooler.label>工业级制冷机</RedistHeat_IndustrialCooler.label>
 
-	<RedistHeat_IndustrialCooler.description>一个巨大的输送冷风的电力设备。这个设备需要至少一个外部排风口。</RedistHeat_IndustrialCooler.description>
+	<RedistHeat_IndustrialCooler.description>一个巨大的输送冷风的电力设备。这个设备需要至少一个连接至室外的排气口。</RedistHeat_IndustrialCooler.description>
 
-	<RedistHeat_ExhaustPort.label>排风口</RedistHeat_ExhaustPort.label>
+	<RedistHeat_ExhaustPort.label>排气口</RedistHeat_ExhaustPort.label>
 
-	<RedistHeat_ExhaustPort.description>一个电力设备，用作工业级制冷机的排风口。产生大量热量。</RedistHeat_ExhaustPort.description>
+	<RedistHeat_ExhaustPort.description>连接工业级制冷机的排气口。产生大量热量。</RedistHeat_ExhaustPort.description>
 
 
 </LanguageData>

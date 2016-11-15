@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-    <RedistHeat_CurrentConnectionChannel>连接至{0}通道。</RedistHeat_CurrentConnectionChannel>
-    <RedistHeat_CurrentConnectedNetTemp>当前温度：</RedistHeat_CurrentConnectedNetTemp>
-    <RedistHeat_CycleLayerLabel>切换通道</RedistHeat_CycleLayerLabel>
-    <RedistHeat_CycleLayerDesc>在不同的通风管网络之间切换。</RedistHeat_CycleLayerDesc>
-    <RedistHeat_CycleLayerMote>{0}通道</RedistHeat_CycleLayerMote>
+    <RedistHeat_CurrentConnectionChannel>已连接至{0}管道。</RedistHeat_CurrentConnectionChannel>
+    <RedistHeat_CurrentConnectedNetTemp>管道气温：</RedistHeat_CurrentConnectedNetTemp>
+    <RedistHeat_CycleLayerLabel>切换管道</RedistHeat_CycleLayerLabel>
+    <RedistHeat_CycleLayerDesc>在不同管道层级之间切换。</RedistHeat_CycleLayerDesc>
+    <RedistHeat_CycleLayerMote>切换至{0}管道</RedistHeat_CycleLayerMote>
 
     <RedistHeat_UpperChannelTranslated>顶层</RedistHeat_UpperChannelTranslated>
     <RedistHeat_LowerChannelTranslated>底层</RedistHeat_LowerChannelTranslated>

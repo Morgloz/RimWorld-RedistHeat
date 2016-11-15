@@ -2,6 +2,6 @@
 <LanguageData>
 
 	<RedistHeat_CommandToggleLockLabel>开关气流</RedistHeat_CommandToggleLockLabel>
-	<RedistHeat_CommandToggleLockDesc>开启或者关闭该管道。</RedistHeat_CommandToggleLockDesc>
+	<RedistHeat_CommandToggleLockDesc>开启或者关闭该管道气流流动。</RedistHeat_CommandToggleLockDesc>
 
 </LanguageData>
