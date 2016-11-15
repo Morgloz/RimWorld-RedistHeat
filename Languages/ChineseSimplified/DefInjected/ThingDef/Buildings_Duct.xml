@@ -3,7 +3,11 @@
 
 	<RedistHeat_DuctPipeUpper.label>通风管（顶层）</RedistHeat_DuctPipeUpper.label>
 
+	<RedistHeat_DuctPipeUpper.description>一根用于输送空气的管道。</RedistHeat_DuctPipeUpper.description>
+
 	<RedistHeat_DuctPipeLower.label>通风管（底层）</RedistHeat_DuctPipeLower.label>
+
+	<RedistHeat_DuctPipeLower.description>一根用于输送空气的管道。</RedistHeat_DuctPipeLower.description>
 
 	<RedistHeat_DuctOutlet.label>排风管</RedistHeat_DuctOutlet.label>
 
@@ -17,7 +21,7 @@
 
 	<RedistHeat_DuctIntake.description>一个将空气压进通风管通道网络的设备。</RedistHeat_DuctIntake.description>
 
-	<RedistHeat_DuctCooler.label>制冷管</RedistHeat_DuctCooler.label>
+	<RedistHeat_DuctCooler.label>制冷机</RedistHeat_DuctCooler.label>
 
 	<RedistHeat_DuctCooler.description>冷却通风管通道网络内的空气。产生大量热量。</RedistHeat_DuctCooler.description>
 
