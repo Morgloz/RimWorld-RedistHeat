@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+	<RedistHeat_DuctPipeUpper.label>通风管（顶层）</RedistHeat_DuctPipeUpper.label>
+
+	<RedistHeat_DuctPipeLower.label>通风管（底层）</RedistHeat_DuctPipeLower.label>
+
+	<RedistHeat_DuctOutlet.label>排风管</RedistHeat_DuctOutlet.label>
+
+	<RedistHeat_DuctOutlet.description>一个将空气从通风管通道网络中排出的设备。</RedistHeat_DuctOutlet.description>
+
+	<RedistHeat_SmartDuctOutlet.label>智能排风管</RedistHeat_SmartDuctOutlet.label>
+
+	<RedistHeat_SmartDuctOutlet.description>一个将空气从通风管通道网络中排出的设备。该设备可自动开关以控制空气流向。</RedistHeat_SmartDuctOutlet.description>
+
+	<RedistHeat_DuctIntake.label>进风管</RedistHeat_DuctIntake.label>
+
+	<RedistHeat_DuctIntake.description>一个将空气压进通风管通道网络的设备。</RedistHeat_DuctIntake.description>
+
+	<RedistHeat_DuctCooler.label>制冷管</RedistHeat_DuctCooler.label>
+
+	<RedistHeat_DuctCooler.description>冷却通风管通道网络内的空气。产生大量热量。</RedistHeat_DuctCooler.description>
+
+</LanguageData>
