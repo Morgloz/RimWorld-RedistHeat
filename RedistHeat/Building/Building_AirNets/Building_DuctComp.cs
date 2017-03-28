@@ -143,7 +143,11 @@ namespace RedistHeat
                 float temp = room.Temperature;
                 float count = compAir.connectedNet.nodes.Count;
 
-                if (pushers > pullers)
+                if (pushers == 0)
+                {
+                    force = 0;
+                }
+                else if (pushers > pullers)
                 {
                     force = (pullers / pushers) * units;
 #if DEBUG
@@ -202,10 +206,10 @@ namespace RedistHeat
                         float diff = room.CellCount - force;
                         float result = ((diff * room.Temperature) + (avgTemp * force)) / room.CellCount;
                         room.Temperature = result;
-                    }
 #if DEBUG
-                    Log.Message("RedistHeat: Intake room result temp: " + result);
+                        Log.Message("RedistHeat: Intake room result temp: " + result);
 #endif
+                    }
                 }
             }
             else
