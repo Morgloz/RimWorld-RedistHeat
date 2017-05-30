@@ -49,9 +49,9 @@ namespace RedistHeat
 
         public override string LabelNoCount => base.LabelNoCount + " (" + compAir.currentLayer.ToString().ToLower() + ")";
 
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool respawnAfterLoad)
         {
-            base.SpawnSetup(map);
+            base.SpawnSetup(map, respawnAfterLoad);
             compAir = GetComp< CompAirTrader >();
 
             Common.WipeExistingPipe( Position );
@@ -60,7 +60,7 @@ namespace RedistHeat
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.LookValue( ref isLocked, "isLocked", false );
+            Scribe_Values.Look( ref isLocked, "isLocked", false );
         }
 
         public override void Tick()
@@ -142,8 +142,11 @@ namespace RedistHeat
             {
                 float temp = room.Temperature;
                 float count = compAir.connectedNet.nodes.Count;
-
-                if (pushers > pullers)
+                if (pushers == 0)
+                {
+                    force = 0;
+                }
+                else if (pushers > pullers)
                 {
                     force = (pullers / pushers) * units;
 #if DEBUG
@@ -195,17 +198,17 @@ namespace RedistHeat
                     }
                     if (force >= room.CellCount)
                     {
-                        room.Temperature = avgTemp;
+                        room.Group.Temperature = avgTemp;
                     }
                     else
                     {
                         float diff = room.CellCount - force;
                         float result = ((diff * room.Temperature) + (avgTemp * force)) / room.CellCount;
-                        room.Temperature = result;
-                    }
+                        room.Group.Temperature = result;
 #if DEBUG
-                    Log.Message("RedistHeat: Intake room result temp: " + result);
+                        Log.Message("RedistHeat: Intake room result temp: " + result);
 #endif
+                    }
                 }
             }
             else
@@ -223,7 +226,7 @@ namespace RedistHeat
                 }
                 if (force >= count)
                 {
-                    room.Temperature = temp;
+                    room.Group.Temperature = temp;
                 }
                 else
                 {
@@ -235,7 +238,7 @@ namespace RedistHeat
 #if DEBUG
                     Log.Message("RedistHeat: Outlet result temp: " + result + " with diff: " + diff + " force: " + force + " temp: " + temp + " count: " + count);
 #endif
-                    room.Temperature = result;
+                    room.Group.Temperature = result;
                 }
             }
             /*float pointTemp;
@@ -318,7 +321,7 @@ namespace RedistHeat
                         var door = Find.VisibleMap.thingGrid.ThingsAt(new IntVec3(c.x,c.y,c.z+1)).ToList().Find(s => s.def.defName == "Door" );
                         if(door != null)
                         {
-                            adjacentRooms.Add(RoomQuery.RoomAt(new IntVec3(c.x, c.y, c.z + 2), Map));
+                            adjacentRooms.Add(RegionAndRoomQuery.RoomAt(new IntVec3(c.x, c.y, c.z + 2), Map));
                         }
                     }
                     if(c.x < x - 1 && !fieldGrid[c.x + 1, c.z])
@@ -326,7 +329,7 @@ namespace RedistHeat
                         var door = Find.VisibleMap.thingGrid.ThingsAt(new IntVec3(c.x + 1, c.y, c.z)).ToList().Find(s => s.def.defName == "Door");
                         if (door != null)
                         {
-                            adjacentRooms.Add(RoomQuery.RoomAt(new IntVec3(c.x + 2, c.y, c.z), Map));
+                            adjacentRooms.Add(RegionAndRoomQuery.RoomAt(new IntVec3(c.x + 2, c.y, c.z), Map));
                         }
                     }
                     if (c.z > 0 && !fieldGrid[c.x, c.z - 1])
@@ -334,7 +337,7 @@ namespace RedistHeat
                         var door = Find.VisibleMap.thingGrid.ThingsAt(new IntVec3(c.x, c.y, c.z - 1)).ToList().Find(s => s.def.defName == "Door");
                         if (door != null)
                         {
-                            adjacentRooms.Add(RoomQuery.RoomAt(new IntVec3(c.x, c.y, c.z - 2), Map));
+                            adjacentRooms.Add(RegionAndRoomQuery.RoomAt(new IntVec3(c.x, c.y, c.z - 2), Map));
                         }
                     }
                     if (c.z > 0 && !fieldGrid[c.x - 1, c.z])
@@ -342,7 +345,7 @@ namespace RedistHeat
                         var door = Find.VisibleMap.thingGrid.ThingsAt(new IntVec3(c.x - 1, c.y, c.z)).ToList().Find(s => s.def.defName == "Door");
                         if (door != null)
                         {
-                            adjacentRooms.Add(RoomQuery.RoomAt(new IntVec3(c.x - 2, c.y, c.z), Map));
+                            adjacentRooms.Add(RegionAndRoomQuery.RoomAt(new IntVec3(c.x - 2, c.y, c.z), Map));
                         }
                     }
                 }
