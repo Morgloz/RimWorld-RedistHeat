@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Buildings>
+<Defs>
 
     <ThingDef Abstract="True" Name="BuildingBase">
         <category>Building</category>
@@ -475,4 +475,4 @@
         <tickerType>Normal</tickerType>
     </ThingDef>
 
-</Buildings>
+</Defs>
